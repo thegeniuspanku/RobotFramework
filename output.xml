@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.9.7 on win32)" generated="20211206 16:23:33.031" rpa="false">
+<suite id="s1" name="OrangeHRM" source="C:\Users\GS-1710\Documents\SelfLearning\MyRobot\RobotUdemyCourse\OrangeHRM3\Tests\OrangeHRM.robot">
+<test id="s1-t1" name="Verify Login Functionality of Orange HRM">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20211206 16:23:33.748" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211206 16:23:33.748" endtime="20211206 16:23:44.429"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211206 16:23:44.429" endtime="20211206 16:23:44.445"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:33.748" endtime="20211206 16:23:44.445"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>executing test case 1</arg>
+</arguments>
+<msg timestamp="20211206 16:23:44.445" level="INFO">executing test case 1</msg>
+<status status="PASS" starttime="20211206 16:23:44.445" endtime="20211206 16:23:44.445"></status>
+</kw>
+<kw name="Go to Orange HRM Login Page" library="OrangeHRMApp">
+<kw name="Navigate To OrangeHRM Login Page" library="OrangeHRMLoginPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20211206 16:23:44.445" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'</msg>
+<status status="PASS" starttime="20211206 16:23:44.445" endtime="20211206 16:23:49.713"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:44.445" endtime="20211206 16:23:49.713"></status>
+</kw>
+<kw name="Verify Login Page" library="OrangeHRMLoginPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>LOGIN Panel</arg>
+</arguments>
+<status status="PASS" starttime="20211206 16:23:49.715" endtime="20211206 16:23:49.787"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:49.714" endtime="20211206 16:23:49.787"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:44.445" endtime="20211206 16:23:49.788"></status>
+</kw>
+<kw name="Login to Orange HRM" library="OrangeHRMApp">
+<kw name="Login to Orange HRM" library="OrangeHRMLoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20211206 16:23:49.791" level="INFO">Typing text 'Admin' into text field 'txtUsername'.</msg>
+<status status="PASS" starttime="20211206 16:23:49.790" endtime="20211206 16:23:49.941"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20211206 16:23:49.941" level="INFO">Typing text 'admin123' into text field 'txtPassword'.</msg>
+<status status="PASS" starttime="20211206 16:23:49.941" endtime="20211206 16:23:49.989"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>btnLogin</arg>
+</arguments>
+<msg timestamp="20211206 16:23:49.989" level="INFO">Clicking button 'btnLogin'.</msg>
+<status status="PASS" starttime="20211206 16:23:49.989" endtime="20211206 16:23:52.996"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:49.790" endtime="20211206 16:23:52.997"></status>
+</kw>
+<kw name="Verify Welcome User On Dashbard Page" library="OrangeHRMUserDashboardPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${WELCOME}</arg>
+</arguments>
+<status status="PASS" starttime="20211206 16:23:52.998" endtime="20211206 16:23:53.014"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:52.997" endtime="20211206 16:23:53.014"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:49.789" endtime="20211206 16:23:53.014"></status>
+</kw>
+<kw name="Logout from OrangeHRM App" library="OrangeHRMApp">
+<kw name="Logout from OrangeHRM" library="OrangeHRMUserDashboardPage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20211206 16:23:55.020" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211206 16:23:53.016" endtime="20211206 16:23:55.020"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>welcome</arg>
+</arguments>
+<msg timestamp="20211206 16:23:55.021" level="INFO">Clicking element 'welcome'.</msg>
+<status status="PASS" starttime="20211206 16:23:55.020" endtime="20211206 16:23:55.265"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20211206 16:23:57.278" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211206 16:23:55.265" endtime="20211206 16:23:57.278"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Logout</arg>
+</arguments>
+<msg timestamp="20211206 16:23:57.278" level="INFO">Clicking link 'Logout'.</msg>
+<status status="PASS" starttime="20211206 16:23:57.278" endtime="20211206 16:23:58.479"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20211206 16:24:00.483" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211206 16:23:58.479" endtime="20211206 16:24:00.483"></status>
+</kw>
+<kw name="Verify Login Page" library="OrangeHRMLoginPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>LOGIN Panel</arg>
+</arguments>
+<status status="PASS" starttime="20211206 16:24:00.483" endtime="20211206 16:24:00.498"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:24:00.483" endtime="20211206 16:24:00.498"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:53.015" endtime="20211206 16:24:00.498"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:23:53.015" endtime="20211206 16:24:00.498"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211206 16:24:00.514" endtime="20211206 16:24:02.154"></status>
+</kw>
+<status status="PASS" starttime="20211206 16:24:00.498" endtime="20211206 16:24:02.154"></status>
+</kw>
+<doc>Verify the Login Functionality test case</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20211206 16:23:33.748" endtime="20211206 16:24:02.154" critical="yes"></status>
+</test>
+<doc>This Test Case Verifies the login functionality of an Orange HRM Application</doc>
+<status status="PASS" starttime="20211206 16:23:33.047" endtime="20211206 16:24:02.154"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="OrangeHRM">OrangeHRM</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
